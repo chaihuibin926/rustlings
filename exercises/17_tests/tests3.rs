@@ -36,7 +36,7 @@ mod tests {
     // TODO: This test should check if the program panics when we try to create
     // a rectangle with negative width.
     #[test]
-    #[should_panic]
+    #[should_panic(expected = "Rectangle width and height must be positive")]
     fn negative_width() {
         let _rect = Rectangle::new(-10, 10);
     }
